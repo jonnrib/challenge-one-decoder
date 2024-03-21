@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta
+      name="description"
+      content="Conheça a Ecoartesia, uma organização comprometida com a promoção da conscientização ambiental, diversidade e sustentabilidade. Explore nossos projetos, cursos que visam criar um futuro mais inclusivo e ecologicamente responsável. Junte-se a nós na busca por fazer a diferença no mundo." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Decoder</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Jonnathan Ribeiro" />
+    <meta name="copyright" content="Jonnathan Ribeiro" />
+  </head>
+
+  <body>
+    <main>
+      <!--barra lateral da esquerda, armazena apenas logo da alura-->
+      <div class="left-side_bar">
+        <img src="assets/alura.svg" class="logo-alura" alt="Logo da Alura" />
+      </div>
+
+      <!--barra central, recebe o texto a ser manipulado-->
+      <div class="central-bar">
+        <textarea onkeyup="checkText(event)" class="input-text" placeholder="Digite seu texto aqui..."></textarea>
+
+        <div class="container-buttons">
+          <span>
+            <img src="assets/small_alert.svg" class="small-alert" alt="Círculo com ponto de exclamação dentro" />
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </span>
+
+          <div class="buttons">
+            <button class="encrypt" onclick="btnEncrypt(),removeRightSideBar()">Criptografar</button>
+            <button class="decrypt" onclick="btnDecrypt()">Descriptografar</button>
+          </div>
+        </div>
+      </div>
+
+      <!--barra lateral da direita, avisa que não há texto-->
+      <div class="right-side-bar">
+        <img src="assets/search.svg" class="search-image" alt="Mulher segurando lupa" />
+        <h2>Nenhuma mensagem encontrada</h2>
+        <p>Digite à esquerda um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+
+      <div class="right-side-bar-output" style="display: none">
+        <textarea class="output-text"></textarea>
+        <button onclick="copy()" class="copy">Copiar</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Feito por <a href="https://www.linkedin.com/in/jonnrib/" target="_blank">Jonnathan Ribeiro</a></p>
+    </footer>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
