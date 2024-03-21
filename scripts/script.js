@@ -1,5 +1,5 @@
-const inputText = document.querySelector('.input_text');
-const outputText = document.querySelector('.output_text');
+const inputText = document.querySelector('.input-text');
+const outputText = document.querySelector('.output-text');
 
 function checkText(event) {
   let verifyText = /^[a-z\n\s]+$/.test(event.target.value) || event.target.value == '';
@@ -75,12 +75,12 @@ function decrypt(stringDecrypted) {
 }
 
 function removeRightSideBar() {
-  const removeRightSideBar = document.querySelector('.right_side_bar').remove();
-  const showRightSideBarOutput = (document.querySelector('.right_side_bar_output').style.display = 'flex');
+  const removeRightSideBar = document.querySelector('.right-side-bar').remove();
+  const showRightSideBarOutput = (document.querySelector('.right-side-bar-output').style.display = 'flex');
 }
 
 function copy() {
-  let copyText = document.querySelector('.output_text');
+  let copyText = document.querySelector('.output-text');
   copyText.select();
   copyText.setSelectionRange(0, 9999);
   document.execCommand('copy');
